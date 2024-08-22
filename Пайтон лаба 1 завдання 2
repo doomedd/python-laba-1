@@ -1,0 +1,18 @@
+# Ініціалізація перших двох чисел ряду Фібоначчі
+fib1 = 0
+fib2 = 1
+
+# Ініціалізація списку для збереження чисел Фібоначчі
+fib_ser = [fib1, fib2]
+
+# Генерація перших 8 чисел ряду Фібоначчі
+for i in range(2, 8):
+    next_fib = fib1 + fib2
+    fib_ser.append(next_fib)
+    fib1 = fib2
+    fib2 = next_fib
+
+print("Числа Фібоначчі:", fib_ser)
+
+sum_fib = sum(fib_ser)
+print("Сума чисел Фібоначчі:", sum_fib)
